@@ -4,7 +4,7 @@ const App = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 
-  // Add a new task to the list
+
   const addTask = () => {
     if (newTask.trim()) {
       setTasks([...tasks, { id: Date.now(), text: newTask, completed: false }]);
@@ -12,7 +12,7 @@ const App = () => {
     }
   };
 
-  // Toggle the completion status of a task
+
   const toggleComplete = (id) => {
     setTasks(
       tasks.map((task) =>
@@ -21,7 +21,7 @@ const App = () => {
     );
   };
 
-  // Delete a task
+
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
